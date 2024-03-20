@@ -73,7 +73,7 @@ public class C2CDetector {
         String csvFile = "C:\\Users\\Admin\\Downloads\\top1milliondomains.csv"; // Path to your CSV file
         String line;
 
-        int count = 1;
+        int count = 0;
         int desired_rows = 5000;  // modify the value as per requirement...
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
@@ -94,7 +94,7 @@ public class C2CDetector {
                         writer.write(url + "\n"); // Write the URL to the output file
                         count++;
 
-                        if (count == desired_rows+1) {
+                        if (count == desired_rows) {
                             break;
                         }
                     }
